@@ -52,7 +52,7 @@ await page.goto("https://rahulshettyacademy.com/loginpagePractise/");
 
 });
 
-test.only("Child windows hadl", async({browser})=>
+test("Child windows hadl", async({browser})=>
 {
 const context = await browser.newContext();
 const page = await context.newPage();
@@ -77,6 +77,44 @@ console.log(await page.locator("#username").textContent());
 
 
 });
+
+
+
+// test('test', async ({ page }) => {
+
+//   await page.goto('https://www.google.com/');
+
+//   await page.getByRole('combobox', { name: 'Search' }).click();
+
+//   await page.getByRole('combobox', { name: 'Search' }).fill('rahulshettu');
+
+//   await page.goto('https://www.google.com/sorry/index?continue=https://www.google.com/search%3Fq%3Drahulshettu%26sca_esv%3D151be9a0a91a555a%26source%3Dhp%26ei%3DW-45aLzzM4GRseMPsbGeiAk%26iflsig%3DAOw8s4IAAAAAaDn8a32axAaFp_VEmdc_0dlFk5o9DYGy%26ved%3D0ahUKEwj8jMSq38uNAxWBSGwGHbGYB5EQ4dUDCA8%26uact%3D5%26oq%3Drahulshettu%26gs_lp%3DEgdnd3Mtd2l6IgtyYWh1bHNoZXR0dTIHEAAYgAQYDTIHEAAYgAQYDTIHEAAYgAQYDTIHEAAYgAQYDTIHEAAYgAQYDTIHEAAYgAQYDTIHEAAYgAQYDTIHEAAYgAQYDTIHEAAYgAQYDTIHEAAYgAQYDUjIU1CmHVjGOXABeACQAQCYAZgBoAHaCKoBAzYuNbgBA8gBAPgBAZgCDKAC1QmoAgrCAgoQABgDGOoCGI8BwgIOEAAYgAQYsQMYgwEYigXCAgsQLhiABBixAxiDAcICDhAuGIAEGLEDGNEDGMcBwgIIEAAYgAQYsQPCAggQLhiABBixA8ICCxAAGIAEGLEDGIMBwgIREC4YgAQYsQMY0QMYgwEYxwHCAgUQABiABMICERAuGIAEGLEDGIMBGNQCGIoFwgIFEC4YgATCAg4QLhiABBixAxiDARiKBcICCxAuGIAEGMcBGK8BwgINEC4YgAQYxwEYChivAcICBxAuGIAEGAqYAxHxBaevPV7KLcb8kgcEMi4xMKAHuJwBsgcEMS4xMLgHxAnCBwUyLTUuN8gHbQ%26sclient%3Dgws-wiz%26sei%3DcO45aM-zAbqTseMPmcHBuA8&q=EgQ8868NGPDc58EGIjA_G3eDMJwHA2I1_7_qwdcT7E62gDDmYMa8Jb_twnYagGdL43D-xr6xRBVjkt084i0yAVJaAUM');
+
+//   await page.locator('iframe[name="a-3obqj96yj4i5"]').contentFrame().getByText('I\'m not a robot').click();
+
+//   await page.locator('iframe[name="c-3obqj96yj4i5"]').click();
+
+//   await page.locator('iframe[name="c-3obqj96yj4i5"]').contentFrame().locator('tr:nth-child(2) > td:nth-child(2)').click();
+
+//   await page.locator('iframe[name="c-3obqj96yj4i5"]').contentFrame().locator('td:nth-child(2)').first().click();
+
+//   await page.locator('iframe[name="c-3obqj96yj4i5"]').contentFrame().locator('tr:nth-child(3) > td:nth-child(2)').click();
+
+//   await page.locator('iframe[name="c-3obqj96yj4i5"]').contentFrame().locator('tr:nth-child(2) > td:nth-child(2)').click();
+
+//   await page.locator('iframe[name="c-3obqj96yj4i5"]').contentFrame().locator('td:nth-child(3)').first().click();
+
+//   await page.locator('iframe[name="c-3obqj96yj4i5"]').contentFrame().getByRole('button', { name: 'Verify' }).click();
+
+//   await page.getByRole('button', { name: 'rahul shetty', exact: true }).click();
+
+//   await page.getByRole('link', { name: 'Rahul Shetty Academy:' }).click();
+
+//   await page.getByRole('link', { name: 'VIEW ALL COURSES' }).click();
+
+//   await page.getByRole('img', { name: 'Product image for Learn SQL' }).click();
+
+// });
 
 
 
