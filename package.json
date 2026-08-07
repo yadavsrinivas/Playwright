@@ -1,16 +1,15 @@
 {
-  "name": "playwright",
+  "name": "sdetplaywright",
   "version": "1.0.0",
+  "description": "",
   "main": "index.js",
-  "scripts": {
-   "test": "npx playwright test tests/WebAPIPart1.spec.js --headed"
-  },
+  "scripts": {},
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": "",
+  "type": "commonjs",
   "devDependencies": {
-    "@playwright/test": "^1.52.0",
-    "@types/node": "^22.15.17"
+    "@playwright/test": "^1.62.1",
+    "@types/node": "^26.0.1"
   }
 }
