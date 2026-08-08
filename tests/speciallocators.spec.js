@@ -1,7 +1,7 @@
 const { test, expect } = require('@playwright/test');
 
 
-test.only('Playwright special locators', async ({ page }) =>
+test('Playwright special locators', async ({ page }) =>
 {
 
  await page.goto("https://rahulshettyacademy.com/angularpractice/");
@@ -14,7 +14,7 @@ test.only('Playwright special locators', async ({ page }) =>
  await page.getByRole("Link",{name : "Shop"}).click();
  await page.locator("app-card").filter({hasText: 'Nokia Edge'}).getByRole("button").click();
 
- page.pause();
+
 
 //34 video
 

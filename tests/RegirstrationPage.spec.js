@@ -17,6 +17,6 @@ await page.locator("[value='Register']").click();
 const PageTitle = await page.title();
 console.log(PageTitles);
 
-
-
 })
+
+
