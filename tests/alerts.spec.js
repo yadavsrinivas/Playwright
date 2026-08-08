@@ -42,7 +42,7 @@ test('Confirm Alert with OK and Cancel', async ({ page }) => {
 
 });
 
-test.only('Prompt Alert', async ({ page }) => {
+test('Prompt Alert', async ({ page }) => {
     await page.goto('https://testautomationpractice.blogspot.com/');
   
     // Enable alert handling
