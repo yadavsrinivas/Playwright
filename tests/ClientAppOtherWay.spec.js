@@ -1,6 +1,6 @@
 const { test, expect } = require('@playwright/test');
 
-test('Client App login', async ({ page })=>
+test.only('Client App login', async ({ page })=>
   {
 
   const productname = "ZARA COAT 3";  
@@ -9,7 +9,7 @@ test('Client App login', async ({ page })=>
   
   await page.goto("https://rahulshettyacademy.com/client/");
   await page.getByPlaceholder("email@example.com").fill(email)
-  await page.getByPlaceholder("enter your passsword").fill("Mokshit@10");
+  await page.getByPlaceholder("enter your passsword").fill("Sidiksha@13");
   await page.getByRole('button',{name :"Login"}).click();
   await page.waitForLoadState('networkidle');
   await page.locator(".card-body b").first().waitFor(); 

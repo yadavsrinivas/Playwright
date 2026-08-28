@@ -1,5 +1,5 @@
 const {test, expect} = require('@playwright/test');
-test('End to End test', async ({page, context}) => {
+test('@sanity End to End test', async ({page, context}) => {
 
 const username = page.locator("#userEmail");
 const password = page.locator("#userPassword");

@@ -11,7 +11,7 @@ test.beforeAll(async ({ browser }) => {
   const page = await context.newPage();
   await page.goto("https://rahulshettyacademy.com/client/");
   await page.locator("#userEmail").fill("srinivas.siraboyna@gmail.com");
-  await page.locator("#userPassword").fill("Mokshit@10");
+  await page.locator("#userPassword").fill("Sidiksha@13");
   await page.locator("[value='Login']").click();
   await page.waitForLoadState('networkidle');
   await context.storageState({ path: 'state.json' });
@@ -66,6 +66,7 @@ test('Client App login', async () => {
   await page.locator("button[routerlink*='myorders']").click();
   await page.locator("tbody").waitFor();
   const rows = await page.locator("tbody tr");
+  await page.pause();
 
   for (let i = 0; i < await rows.count(); ++i) {
     const roworderId = await rows.nth(i).locator("th").textContent();
@@ -78,7 +79,7 @@ test('Client App login', async () => {
   expect(orderID.includes(orderIdDetails)).toBeTruthy();
 });
 
-test('Test Case title verify', async () => {
+test('Test Case2 title verify', async () => {
   const email = "srinivas.siraboyna@gmail.com";
   const productname = "ZARA COAT 3";
   const page = await webContext.newPage();
@@ -89,4 +90,4 @@ test('Test Case title verify', async () => {
 
 })
 
-//55 complete
+//65 complete

@@ -1,6 +1,6 @@
 const {test, expect, request} = require('@playwright/test');
-const {APIUtils} = require('./utils/APIUtils');
-const loginPayLoad = {userEmail:"srinivas.siraboyna@gmail.com",userPassword:"Mokshit@10"};
+const {APiUtils} = require('../utils/ApiUtils');
+const loginPayLoad = {userEmail:"srinivas.siraboyna@gmail.com",userPassword:"Sidiksha@13"};
 const orderPayLoad = {orders: [{country: "Cuba", productOrderedId: "67a8dde5c0d3e6622a297cc8"}]};
 let response;
 let apiContext;
@@ -9,7 +9,7 @@ test.beforeAll(async() =>
 {
     
   const apiContext = await request.newContext();
-  const apiUtils = new APIUtils(apiContext, loginPayLoad);
+  const apiUtils = new APiUtils(apiContext, loginPayLoad);
   response = await apiUtils.createOrder(orderPayLoad);
 
 })
@@ -49,7 +49,7 @@ test('Place the Order', async ({page})=>
   }
 
   const orderIdDetails =  await page.locator("div  .col-text").textContent();
- // await page.pause();
+  await page.pause();
   expect(response.orderId.includes(orderIdDetails)).toBeTruthy();
 
 });

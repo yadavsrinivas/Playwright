@@ -1,5 +1,5 @@
 const {test, expect} = require('@playwright/test');
-test('UI Basics', async ({page, context}) => {
+test("@sanity UI Basics", async ({page, context}) => {
     
 await page.goto('https://rahulshettyacademy.com/loginpagePractise/');
 const documentLink = page.locator("[href*='documents-request']");

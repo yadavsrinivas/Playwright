@@ -1,0 +1,5 @@
+"DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
+"","31160","@sanity End to End test","","2026-08-24","broken","2026-08-24","","EndtoEnd.spec.js","",""
+"","11690","@sanity UI Basics","","2026-08-24","passed","2026-08-24","","UIBascisTests.Spec.js","",""
+"","9672","@sanity Client App login","","2026-08-24","failed","2026-08-24","","ClientApplogin.spec.js","",""
+"","1472","@sanity Client App login","","2026-08-24","failed","2026-08-24","","Client.AppPO.spec.js","",""
