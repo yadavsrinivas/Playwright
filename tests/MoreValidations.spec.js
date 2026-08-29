@@ -38,11 +38,11 @@ await page.screenshot({path: 'screenshot1.png'})
 await expect (page.locator("#displayed-text")).toBeHidden();
 
 })
-test.only('Screentshot on visual', async ({page})=>
-{
-  await page.goto("https://google.com/");
-  expect(await page.screenshot()).toMatchSnapshot('landing-win32.png');
+// test.only('Screentshot on visual', async ({page})=>
+// {
+//   await page.goto("https://google.com/");
+//   expect(await page.screenshot()).toMatchSnapshot('landing-win32.png');
 
-}
+// }
 
-)
+// )

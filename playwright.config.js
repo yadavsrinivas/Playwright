@@ -1,55 +1,30 @@
 // @ts-check
 import { defineConfig, devices } from '@playwright/test';
-import { TIMEOUT } from 'node:dns';
 
-
-/**
- * @see https://playwright.dev/docs/test-configuration
- */
-const config = ({
+export default defineConfig({
+  // Test location
   testDir: './tests',
-<<<<<<< HEAD
- 
 
-  timeout: 30 *1000,
-  expect : {
-    timeout: 5000,
-  },
-  
-=======
+  // Test timeout
+  timeout: 30 * 1000,
 
->>>>>>> 0753e43 (Updated new changes)
-  reporter : "html",
-  
- 
-  use: {
-<<<<<<< HEAD
-  actionTimeout: 10 * 1000,
-  navigationTimeout: 30 * 1000,
-  browserName : "chromium",
-  headless : false,
-  screenshot : "on",
-  trace: "retain-on-failure"
-=======
-  actionTime : 10000,
-  browserName : "chromium",
-  headless : false,
-  screenshot : "on",
-  trace: 'on', //on/off'//retain-on-failure
-    timeout: 30 *1000,
-  navigationTimeout: 30000,
-  expect : {
-    timeout: 10000,//10 secs
-  
-  },
->>>>>>> 0753e43 (Updated new changes)
-
-    /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
-
+  // Expect timeout
+  expect: {
+    timeout: 10 * 1000,
   },
 
+  // HTML report
+  reporter: 'html',
 
-     
+       use: {
+        browserName: 'webkit',
+        headless: false,
+        screenshot: 'on',
+        trace: 'on',
+
+        actionTimeout: 10 * 1000,
+        navigationTimeout: 30 * 1000,
+      },
+    
+
 });
- module.exports = config
-
